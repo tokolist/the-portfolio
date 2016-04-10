@@ -1,0 +1,85 @@
+/* Form
+================================================*/
+
+@mixin buttonfix {
+	overflow: visible; /* For IE */
+
+	&::-moz-focus-inner,
+	&::-moz-focus-inner {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+form.styled {
+	.row {
+		clear: both;
+		margin-top: 12px;
+	}
+
+	$left-col-width: 220px;
+	$left-col-padding-right: 20px;
+
+	.left {
+		float: left;
+		width: $left-col-width;
+		padding-right: $left-col-padding-right;
+	}
+
+	.right {
+		margin-left: $left-col-width + $left-col-padding-right;
+	}
+
+	.buttons {
+		margin-top: 18px;
+	}
+
+	label {
+		display: block;
+		padding-bottom: 5px;
+	}
+
+	input[type='text'], textarea {
+		padding: 2px 4px;
+		background: #e8e8e8;
+		color: $font-color;
+		font-size: 12px;
+		font-family: $basic-font-family;
+
+		@include pseudo-3d-border(1px solid, #bababa, #f9f8f6);
+	}
+
+	input[type='text'] {
+		width: 210px;
+
+		@include same(28px, height, line-height);
+	}
+
+	textarea {
+		width: 450px;
+		height: 116px;
+	}
+
+	button, input[type='submit'] {
+		padding: 0;
+		cursor: pointer;
+
+		height: 36px;
+
+		font-family: $bebas-neue-font;
+		font-size: 24px;
+		text-transform: uppercase;
+		color: #fff;
+
+		border-width: 2px;
+		border-style: solid;
+		border-color: #b05353;
+		border-top-color: #e48f8f;
+
+		background: #e17979;
+
+		@include text-shadow(#000 .5px .5px 0);
+		@include background-image(linear-gradient(#e07c7c, #bd5757));
+		@include buttonfix;
+	}
+}

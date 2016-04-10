@@ -1,0 +1,51 @@
+/* Body */
+
+@if $font-relative-size {
+	html {
+		font-size: 100.01%;
+	}
+}
+
+html.ie6 {
+	filter: expression(this.style.filter = '', document.execCommand('BackgroundImageCache', false, true));
+}
+
+body {
+	background: $body-backgroung-color image-url('background.png');
+	font-family: $basic-font-family;
+	line-height: 1;
+	color: $font-color;
+
+	#main {
+		width: 960px;
+		margin: 0 auto;
+	}
+
+	@if $font-relative-size {
+		font-size: 62.5%;
+	}
+	@else {
+		font-size: $base-font-size;
+	}
+
+	@if $body-align-center { margin: 0 auto; }
+
+	@if variable-exists(body-min-width) { min-width: $body-min-width; }
+	@if variable-exists(body-max-width) { max-width: $body-max-width; }
+
+	@if variable-exists(body-min-width) and variable-exists(body-max-width) {
+		@include ie-only(6) {
+			width: expression((documentElement.clientWidth || body.clientWidth) < #{strip-units($body-min-width)} ? '#{$body-min-width}' : (documentElement.clientWidth || body.clientWidth) > #{strip-units($body-max-width)} ? '#{$body-max-width}' : 'auto');
+		}
+	}
+	@else if variable-exists(body-min-width) {
+		@include ie-only(6) {
+			width: expression((documentElement.clientWidth || body.clientWidth) < #{strip-units($body-min-width)} ? '#{$body-min-width}' : 'auto');
+		}
+	}
+	@else if variable-exists(body-max-width) {
+		@include ie-only(6) {
+			width: expression((documentElement.clientWidth || body.clientWidth) > #{strip-units($body-max-width)} ? '#{$body-max-width}' : 'auto');
+		}
+	}
+}

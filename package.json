@@ -1,0 +1,14 @@
+{
+  "name": "blog-markup",
+  "version": "1.0.0",
+  "author": "tokolist",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-postcss": "^6.1.0",
+    "postcss-scss": "^0.1.7",
+    "stylelint": "^5.4.0",
+    "stylelint-config-standard": "^5.0.0"
+  }
+}

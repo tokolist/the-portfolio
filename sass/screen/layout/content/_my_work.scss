@@ -1,0 +1,88 @@
+#my_work {
+	clear: both;
+	padding: 78px 0 0 0;
+
+	@include block-clearfix;
+
+	.heading {
+		position: relative;
+		margin-bottom: $section-h2-margin-bottom;
+
+		@include block-clearfix;
+
+		h2 {
+			margin-bottom: 0;
+		}
+
+		ul {
+			position: absolute;
+			bottom: 10px;
+			right: 4px;
+
+			li {
+				float: left;
+				padding: 0 0 0 14px;
+
+				a {
+					font-family: $basic-font-family;
+					font-size: 11px;
+					color: $font-color;
+					text-decoration: none;
+					text-transform: uppercase;
+				}
+
+				a:hover, &.active a {
+					color: $link-color;
+				}
+			}
+		}
+	}
+
+	.projects {
+		li {
+			float: left;
+			width: 220px;
+			padding: 0 10px 16px 10px;
+
+			a {
+				text-decoration: none;
+
+				&, span, img {
+					display: block;
+					cursor: pointer;
+				}
+
+				.picture {
+					height: 130px;
+					background: #fff;
+
+					.shadow {
+						position: relative;
+						z-index: -1;
+						$shadow-color: #8c8c8c;
+						background: $shadow-color;
+
+						@include transform(perspective(800px) rotateX(330deg) scale(.97, 1) translateY(8px));
+						@include single-box-shadow(0, 0, 6px, 3px, $shadow-color);
+
+						@include ie-only(6, 7, 8, 9) {
+							display: none;
+						}
+					}
+				}
+
+				.title {
+					display: block;
+					padding: 12px 12px 0 12px;
+					text-align: center;
+
+					color: $font-color;
+				}
+
+				&:hover .title {
+					color: $link-color;
+				}
+			}
+		}
+	}
+}

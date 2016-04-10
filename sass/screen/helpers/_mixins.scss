@@ -1,0 +1,23 @@
+@mixin same($value, $properties...) {
+	@each $property in $properties {
+		#{$property}: $value;
+	}
+}
+
+@mixin pseudo-3d-border($border-type, $left-top-color, $right-bottom-color) {
+	border: $border-type $left-top-color;
+	@include same($border-type $right-bottom-color, border-bottom, border-right);
+}
+
+@mixin font-smoothing($antialiased: true) {
+	@if $antialiased {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-smoothing: antialiased;
+	}
+	@else {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+		font-smoothing: auto;
+	}
+}

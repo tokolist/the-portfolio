@@ -1,0 +1,25 @@
+/* Content */
+
+section {
+	h2 {
+		padding: 0 0 0 10px;
+		margin-bottom: $section-h2-margin-bottom;
+		border-bottom: $hr-border;
+		color: $header-color;
+		text-transform: uppercase;
+		font-family: $bebas-neue-font;
+		font-size: 40px;
+	}
+
+	h3 {
+		font-family: $bebas-neue-font;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+}
+
+@import "content/greetings";
+@import "content/about_me";
+@import "content/skills";
+@import "content/my_work";
+@import "content/contact";

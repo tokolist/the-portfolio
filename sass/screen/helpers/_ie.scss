@@ -1,0 +1,19 @@
+@mixin ie-only($versions...) {
+	$selector: "";
+
+	@each $version in $versions {
+		@if $selector != "" {
+			$selector: $selector + ", ";
+		}
+
+		$selector: $selector + "html.ie" + $version;
+
+		@if & {
+			$selector: $selector + " &";
+		}
+	}
+
+	#{$selector} {
+		@content;
+	}
+}

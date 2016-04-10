@@ -1,0 +1,37 @@
+/* Header */
+
+header {
+	padding: 38px 0;
+
+	@include block-clearfix;
+
+	h1 {
+		float: left;
+
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&, span {
+				display: block;
+			}
+
+			.name {
+				color: $header-color;
+				font-size: 12px;
+			}
+
+			.logo {
+				display: block;
+				border-bottom: 4px solid $font-color;
+				color: $font-color;
+				font-family: $bebas-neue-font;
+				font-size: 50px;
+				line-height: 44px;
+				letter-spacing: .4px;
+			}
+		}
+	}
+
+	@import "menu";
+}

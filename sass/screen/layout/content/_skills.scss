@@ -1,0 +1,38 @@
+#skills {
+	margin-left: 490px;
+
+	.left, .right {
+		padding: 0 0 0 7px;
+	}
+
+	.left {
+		float: left;
+		width: 236px;
+	}
+
+	.right {
+		@include block-clearfix;
+	}
+
+	h2 {
+		margin-bottom: 13px;
+	}
+
+	ul {
+		padding: 2px 0 0 0;
+		line-height: 19px;
+
+		li {
+			padding-left: 14px;
+
+			&:before {
+				position: absolute;
+				margin-left: -11px;
+				content: '\2022';
+				color: #dc6565;
+				font-size: 14px;
+			}
+		}
+	}
+
+}

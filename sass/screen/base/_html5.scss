@@ -1,0 +1,24 @@
+/* HTML5
+================================================*/
+
+article, aside, details, figcaption,
+figure, footer, header, hgroup, mark, meter, nav, output,
+progress, section, summary, time, dialog, main {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+}
+
+audio, canvas, video {
+	display: inline-block;
+
+	@include ie-only(6) {
+		display: inline;
+		zoom: 1;
+	}
+}

@@ -1,0 +1,28 @@
+/* Fonts
+================================================*/
+
+@include font-face(
+	'bebas_neue_regular',
+	font-files(
+		'bebasneue_regular-webfont.woff2',
+		'bebasneue_regular-webfont.woff',
+		'bebasneue_regular-webfont.ttf',
+		'bebasneue_regular-webfont.svg'
+	),
+	'bebasneue_regular-webfont.eot',
+	'normal',
+	'normal'
+);
+
+@include font-face(
+	'pt_sans_regular',
+	font-files(
+		'pts55f-webfont.woff2',
+		'pts55f-webfont.woff',
+		'pts55f-webfont.ttf',
+		'pts55f-webfont.svg'
+	),
+	'pts55f-webfont.eot',
+	'normal',
+	'normal'
+);

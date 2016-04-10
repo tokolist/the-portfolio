@@ -1,0 +1,23 @@
+/* Links
+================================================*/
+
+a {
+	color: $link-color;
+	text-decoration: underline;
+
+	&:link {
+		/**/
+	}
+
+	&:visited {
+		/**/
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:active {
+		/**/
+	}
+}

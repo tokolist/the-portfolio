@@ -1,0 +1,31 @@
+/* Clearfix
+================================================*/
+
+.clearfix {
+	display: block;
+
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+
+	@include ie-only(6) {
+		height: 1%;
+	}
+}
+
+.clear {
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	clear: both;
+	overflow: hidden;
+}
+
+@mixin block-clearfix {
+	overflow: hidden;
+	zoom: 1;
+}

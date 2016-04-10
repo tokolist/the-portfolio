@@ -1,0 +1,29 @@
+/* Menu */
+
+nav {
+	float: right;
+
+	ul {
+		padding: 23px 2px 0 0;
+
+		li {
+			float: left;
+			font-family: $bebas-neue-font;
+			font-size: 22px;
+			padding: 0 0 0 12px;
+
+			a {
+				display: block;
+				padding: 0 4px 2px 4px;
+				color: #bebebe;
+				text-decoration: none;
+			}
+
+			a:hover, &.active a {
+				color: $font-color;
+				border-bottom: 2px solid $font-color;
+			}
+		}
+	}
+
+}

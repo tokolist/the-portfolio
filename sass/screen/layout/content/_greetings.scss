@@ -1,0 +1,22 @@
+
+#greetings {
+	padding: 37px 0 86px 0;
+
+	.hello, .slogan {
+		font-family: $myriad-pro-font;
+		font-size: 56px;
+		letter-spacing: -.4px;
+
+		text-align: center;
+
+		@include text-shadow(
+			#000 -.5px -.5px 0,
+			#fff .5px .5px 0
+		);
+	}
+
+	.hello {
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
